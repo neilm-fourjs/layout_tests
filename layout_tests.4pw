@@ -92,6 +92,9 @@
     </Package>
   </Group>
   <Group label="Project" language="Genero">
+    <Library binaryName="_README" excludeFromBuild="true" id="-367608216" label="_README">
+      <File filePath="README.md"/>
+    </Library>
     <Library binaryName="Config" id="362164715" label="Config"/>
     <Library binaryName="Database" id="455109296" label="Database"/>
     <Library binaryName="Entities" id="212784684" label="Entities"/>

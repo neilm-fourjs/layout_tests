@@ -33,3 +33,7 @@ Various icons and text tests in a a single form.
 ![scr1](https://github.com/neilm-fourjs/layout_tests/raw/master/screenshots/layouts_4_multi_gma2.png "Mutli GMA")
 ![scr1](https://github.com/neilm-fourjs/layout_tests/raw/master/screenshots/layouts_4_multi_gma.png "Mutli GMA")
 
+## Padding
+Add paddng elements to the form to force buttons to the bottom of the screen.
+![scr1](https://github.com/neilm-fourjs/layout_tests/raw/master/screenshots/layouts_5_padding_gbc.png "Padding GBC")
+![scr1](https://github.com/neilm-fourjs/layout_tests/raw/master/screenshots/layouts_5_padding_gdc.png "Padding GDC")
