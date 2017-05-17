@@ -41,10 +41,11 @@ Property of Four Js*
   <ActionDefault name="prevtab" text="Previous Folder Tab" acceleratorName="Control-Shift-Tab" contextMenu="no"/>
   <ActionDefault name="dialogtouched" validate="no" defaultView="no"  contextMenu="no"/>
 
-  <ActionDefault name="win1" image="fa-desktop" text="Simple" contextMenu="no"/>
+  <ActionDefault name="win1" image="fa-caret-square-o-up" text="Simple" contextMenu="no"/>
   <ActionDefault name="win2" image="fa-desktop" text="Titled" contextMenu="no"/>
-  <ActionDefault name="win3" image="fa-desktop" text="Right" contextMenu="no"/>
+  <ActionDefault name="win3" image="fa-caret-square-o-right" text="Right" contextMenu="no"/>
   <ActionDefault name="win4" image="fa-desktop" text="Multiple Grids" contextMenu="no"/>
+  <ActionDefault name="win5" image="fa-list-alt" text="Padding" contextMenu="no"/>
   <ActionDefault name="about" image="about" text="About" contextMenu="yes"/>
 	<ActionDefault name="gma_about" text="GMA" image="quest"/>
 	<ActionDefault name="back" text="Go Back" image="fa-arrow-left"/>

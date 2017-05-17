@@ -64,6 +64,7 @@
       <Directory description="Database" destinationDirectory="$(ProjectDir)/bin" includedFiles="*.db" label="Database" recursive="false" sourceDirectory="$(ProjectDir)/database"/>
       <Directory description="Images" destinationDirectory="$(ProjectDir)/bin" includedFiles="*.png,*.jpg" label="Images" sourceDirectory="$(ProjectDir)/images"/>
       <Directory description="Studio Library" destinationDirectory="$(ProjectDir)/bin" includedFiles="*.42?" label="libgst" recursive="false" sourceDirectory="$(GSTLIBRARYDIR)/bin"/>
+      <Directory description="Binaries" destinationDirectory="$(ProjectDir)/bin/default" includedFiles="*.42?" label="Localization" recursive="false" sourceDirectory="$(ProjectDir)/bin/default"/>
       <Directory description="Resources" destinationDirectory="$(ProjectDir)/bin" includedFiles="*.4ad,*.4st" label="Resources" recursive="false" sourceDirectory="$(ProjectDir)/resources"/>
       <Directory description="Web Components" destinationDirectory="$(ProjectDir)/bin" label="Webcomponents" recursive="false" sourceDirectory="$(ProjectDir)/webcomponents"/>
     </Package>
@@ -101,6 +102,7 @@
       <File filePath="src/form2.per"/>
       <File filePath="src/form3.per"/>
       <File filePath="src/form4.per"/>
+      <File filePath="src/form5.per"/>
       <File filePath="src/layout_tests.4gl"/>
     </Application>
     <Library binaryName="Resources" id="159917928" label="Resources">

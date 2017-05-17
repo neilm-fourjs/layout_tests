@@ -1,0 +1,38 @@
+LAYOUT (TEXT="Padding")   
+VBOX 
+GRID
+{
+[welcome                                                        ]
+[splash                                                         ]
+[connected                                                      ]
+[status                                                         ]
+[                                                               ]
+[                                                               ]
+[                                                               ]
+[                                                               ]
+[                                                               ]
+[                                                               ]
+[bt_photo                                                       ]
+[bt_sync                                                        ]
+[bt_admint                                                      ]
+[bt_logout                                                      ]
+}
+END -- GRID
+END -- VBOX
+END -- LAYOUT
+
+ATTRIBUTES
+#use textedit
+LABEL welcome : welcome,TEXT=%"Welcome_Message", JUSTIFY=CENTER;
+IMAGE splash:splash, STYLE="center noborder", IMAGE="disconnected", STRETCH=X,
+			WIDTH=100, HEIGHT=100;
+LABEL connected=FORMONLY.connected, JUSTIFY=CENTER;
+TEXTEDIT status=FORMONLY.status, NOENTRY, SCROLLBARS=NONE, SIZEPOLICY=FIXED, STRETCH=BOTH;
+BUTTON bt_photo : bt_photo, TEXT=%"Image_Upload_Demo", HIDDEN;
+BUTTON bt_sync : bt_sync, TEXT=%"Sync_With_Network";
+BUTTON bt_admint : bt_admint, TEXT=%"Admin_Tools", HIDDEN;
+BUTTON bt_logout : bt_logout, TEXT=%"Logout";
+
+END
+
+

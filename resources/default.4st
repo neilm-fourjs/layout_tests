@@ -22,11 +22,7 @@ Property of Four Js*
      <StyleAttribute name="statusBarType" value="none" />
   </Style>
   <Style name=".right">
-     <StyleAttribute name="gravity" value="right"/>
      <StyleAttribute name="alignment" value="right" />
-  </Style>
-  <Style name=".fill_h">
-     <StyleAttribute name="gravity" value="fill_horizontal"/>
   </Style>
   <Style name=".title">
      <StyleAttribute name="fontWeight" value="bold" />
@@ -42,10 +38,7 @@ Property of Four Js*
   <Style name=".center">
      <StyleAttribute name="alignment" value="center" />
   </Style>
-  <Style name=".center_h">
-     <!-- StyleAttribute name="alignment" value="horizontalCenter" /-->
-     <StyleAttribute name="gravity" value="center_horizontal" />
-  </Style>
+
 
   <Style name="Window">
      <StyleAttribute name="windowType" value="normal" />
