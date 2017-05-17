@@ -1,0 +1,14 @@
+
+LAYOUT (TEXT="Center - title",MINWIDTH=60)
+GRID
+{
+[logo|title                             |date      ]
+}
+END -- GRID
+
+ATTRIBUTES
+IMAGE logo : logo, IMAGE="logo", STYLE="noborder";
+LABEL TITLE = FORMONLY.title, SIZEPOLICY=FIXED, JUSTIFY=CENTER,STYLE="title";
+LABEL date = FORMONLY.date;
+
+

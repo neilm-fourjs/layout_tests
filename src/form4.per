@@ -1,0 +1,51 @@
+
+LAYOUT (TEXT="Multiple Grids",MINWIDTH=60)
+VBOX
+GRID
+{
+[logo|title                             |date      ]
+}
+END -- GRID
+
+GRID
+{
+----------------------------------
+This is almost centered 
+because of Stretch=X & the style
+[logo2]
+}
+END -- GRID
+GRID
+{
+----------------------------------
+The logo below should 
+actually be only 16 pixels square.
+[logo3]
+[titl2]
+}
+END -- GRID
+
+GRID
+{
+----------------------------------
+                 [: :footer|logo4]
+}
+END -- GRID
+
+END -- VBOX
+
+ATTRIBUTES
+IMAGE logo : logo, IMAGE="logo", STYLE="noborder";
+LABEL TITLE = FORMONLY.title, SIZEPOLICY=FIXED, JUSTIFY=CENTER,STYLE="title";
+LABEL date = FORMONLY.date;
+
+-- The STRETCH=X does the magic to make the image box take 100% width so the center works.
+IMAGE logo2 : logo2, IMAGE="logo",STYLE="center noborder",STRETCH=X;
+
+-- specifying a height and width in pixels does nothing!
+IMAGE logo3 = FORMONLY.logo3, JUSTIFY=CENTER, HEIGHT=16 PIXELS, WIDTH=16 PIXELS , STYLE="center noborder";
+LABEL titl2 : titl2, TEXT="My Sub Title", JUSTIFY=CENTER;
+
+-- footer - text should be next to image and both anchored to the right of the window.
+LABEL footer : footer, TEXT="All rights reserved (C)", JUSTIFY=RIGHT;
+IMAGE logo4 : logo4,IMAGE="logo",AUTOSCALE,STRETCH=X, HEIGHT=16 PIXELS, WIDTH=16 PIXELS , STYLE="right noborder";

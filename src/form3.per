@@ -1,0 +1,12 @@
+LAYOUT (TEXT="To the Right",MINWIDTH=60)
+GRID
+{
+[title                              |logo      ]
+[                                   |date      ]
+}
+END -- GRID
+
+ATTRIBUTES
+LABEL TITLE = FORMONLY.title, SIZEPOLICY=FIXED, JUSTIFY=CENTER,STYLE="title";
+IMAGE logo : logo, IMAGE="logo", STYLE="noborder right",STRETCH=X;
+TEXTEDIT date = FORMONLY.DATE,STYLE="noborder right",STRETCH=X, SCROLLBARS=NONE;

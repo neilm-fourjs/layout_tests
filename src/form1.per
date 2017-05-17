@@ -1,0 +1,12 @@
+
+LAYOUT (TEXT="Center - simple",MINWIDTH=60)
+GRID
+{
+[logo2]
+[title]
+}
+END -- GRID
+ATTRIBUTES
+--NOTE: GMA doesn't need the STRETCH=X to make it center, GDC and GBC do need it.
+IMAGE logo2 : logo2, IMAGE="logo",STRETCH=X, STYLE="center noborder";
+LABEL title : title, TEXT="Title", JUSTIFY=CENTER,STYLE="title";
