@@ -17,10 +17,9 @@ A title area with a logo, title and date. The text should be centered the image 
 ![scr1](https://github.com/neilm-fourjs/layout_tests/raw/master/screenshots/layouts_2_title_gma.png "Title GMA")
 
 ## Right
-An icon and date to the right of the screen and a title centered.
+An icon and date to the right of the screen and a title to the left.
 
 ![scr1](https://github.com/neilm-fourjs/layout_tests/raw/master/screenshots/layouts_3_right_gbc.png "Right GBC")
-![scr1](https://github.com/neilm-fourjs/layout_tests/raw/master/screenshots/layouts_3_right_gdc2.png "Right GDC")
 ![scr1](https://github.com/neilm-fourjs/layout_tests/raw/master/screenshots/layouts_3_right_gdc.png "Right GDC")
 ![scr1](https://github.com/neilm-fourjs/layout_tests/raw/master/screenshots/layouts_3_right_gma2.png "Right GMA")
 ![scr1](https://github.com/neilm-fourjs/layout_tests/raw/master/screenshots/layouts_3_right_gma.png "Right GMA")
@@ -37,3 +36,4 @@ Various icons and text tests in a a single form.
 Add paddng elements to the form to force buttons to the bottom of the screen.
 ![scr1](https://github.com/neilm-fourjs/layout_tests/raw/master/screenshots/layouts_5_padding_gbc.png "Padding GBC")
 ![scr1](https://github.com/neilm-fourjs/layout_tests/raw/master/screenshots/layouts_5_padding_gdc.png "Padding GDC")
+![scr1](https://github.com/neilm-fourjs/layout_tests/raw/master/screenshots/layouts_5_padding_gma.png "Padding GMA")

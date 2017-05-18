@@ -3,7 +3,7 @@ CONSTANT c_appver = "1.0"
 
 CONSTANT c_f1 = "A simple centered icon with a title below it."
 CONSTANT c_f2 = "A title area with a logo, title and date. The text should be centered the image to left and the date to the right"
-CONSTANT c_f3 = "An icon and date to the right of the screen and a title centered."
+CONSTANT c_f3 = "An icon and date to the right of the screen and a title to the left."
 CONSTANT c_f4 = "Various icons and text tests in a single form."
 CONSTANT c_f5 = "Attempt to pad the form so the buttons are at the bottom of the screen."
 

@@ -5,7 +5,7 @@ GRID
 [welcome                                                        ]
 [splash                                                         ]
 [connected                                                      ]
-[status                                                         ]
+[spacer                                                         ]
 [                                                               ]
 [                                                               ]
 [                                                               ]
@@ -30,8 +30,8 @@ LABEL connected=FORMONLY.connected, JUSTIFY=CENTER;
 
 -- can't use TEXTEDIT as a space because the background colour is wrong on GDC & GBC
 -- and on GMA it has the underline for a 'field' and on GMI it has a border.
---TEXTEDIT status=FORMONLY.status, NOENTRY, SCROLLBARS=NONE, SIZEPOLICY=FIXED, STRETCH=BOTH;
-IMAGE status : spacer1, IMAGE="spacer", STRETCH=Y, STYLE="noborder";
+--TEXTEDIT spacer=FORMONLY.status, NOENTRY, SCROLLBARS=NONE, SIZEPOLICY=FIXED, STRETCH=BOTH;
+IMAGE spacer : spacer1, IMAGE="spacer", STRETCH=Y, STYLE="noborder";
 
 BUTTON bt_photo : bt_photo, TEXT=%"Image_Upload_Demo", HIDDEN;
 BUTTON bt_sync : bt_sync, TEXT=%"Sync_With_Network";
