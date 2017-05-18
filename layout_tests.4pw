@@ -106,6 +106,7 @@
       <File filePath="src/form3.per"/>
       <File filePath="src/form4.per"/>
       <File filePath="src/form5.per"/>
+      <File filePath="src/form6.per"/>
       <File filePath="src/layout_tests.4gl"/>
     </Application>
     <Library binaryName="Resources" id="159917928" label="Resources">

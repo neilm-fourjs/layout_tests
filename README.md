@@ -2,6 +2,19 @@
 Various layout tests for text and images in various Genero clients.
 
 
+# Spacer / padding element
+The best way I've found so far is a transparent 2 pixel square image, used like this:
+```
+IMAGE spacer1 : spacer1, IMAGE="spacer", STRETCH=Y, STYLE="noborder";
+```
+The issue with this is you still need to set the height in the actually grid, just using the HEIGHT attribute on the widget is okay on GDC and GBC but doesn't work right on a GMA.
+
+I did try with TEXTEDIT but the background colour is wrong on GDC & GBC and on GMA it has the underline for a 'field' and on GMI it has a border.
+```
+TEXTEDIT spacer=FORMONLY.spacer, NOENTRY, SCROLLBARS=NONE, SIZEPOLICY=FIXED, STRETCH=BOTH;
+```
+
+
 ## Simple
 A simple centered icon with a title below it.
 
