@@ -13,22 +13,19 @@ GRID
 This is almost centered 
 because of Stretch=X & the style
 [logo2]
-}
-END -- GRID
-GRID
-{
+[titl2]
 ----------------------------------
 The logo below should 
 actually be only 16 pixels square.
 [logo3]
-[titl2]
 }
 END -- GRID
 
 GRID
 {
-----------------------------------
-                 [: :footer|logo4]
+[spacer1                                                        ]
+-----------------------------------------------------------------
+[spacer2                                           |footer|logo4]
 }
 END -- GRID
 
@@ -41,11 +38,15 @@ LABEL date = FORMONLY.date;
 
 -- The STRETCH=X does the magic to make the image box take 100% width so the center works.
 IMAGE logo2 : logo2, IMAGE="logo",STYLE="center noborder",STRETCH=X;
-
--- specifying a height and width in pixels does nothing!
-IMAGE logo3 = FORMONLY.logo3, JUSTIFY=CENTER, HEIGHT=16 PIXELS, WIDTH=16 PIXELS , STYLE="center noborder";
 LABEL titl2 : titl2, TEXT="My Sub Title", JUSTIFY=CENTER;
 
+-- specifying a height and width in pixels does nothing!
+IMAGE logo3 = FORMONLY.logo3, JUSTIFY=CENTER,AUTOSCALE, HEIGHT=16 PIXELS, WIDTH=16 PIXELS , STYLE="center noborder";
+
+
 -- footer - text should be next to image and both anchored to the right of the window.
+-- why is there a big gap between the hline and the footer items in GDC?
+IMAGE spacer1 : spacer1, IMAGE="spacer", STRETCH=Y, STYLE="noborder";
+IMAGE spacer2 : spacer2, IMAGE="spacer", STRETCH=X, STYLE="noborder";
 LABEL footer : footer, TEXT="All rights reserved (C)", JUSTIFY=RIGHT;
 IMAGE logo4 : logo4,IMAGE="logo",AUTOSCALE,STRETCH=X, HEIGHT=16 PIXELS, WIDTH=16 PIXELS , STYLE="right noborder";

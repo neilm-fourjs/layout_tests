@@ -42,11 +42,16 @@ Various icons and text tests in a a single form.
 
 ![scr1](https://github.com/neilm-fourjs/layout_tests/raw/master/screenshots/layouts_4_multi_gbc.png "Mutli GBC")
 ![scr1](https://github.com/neilm-fourjs/layout_tests/raw/master/screenshots/layouts_4_multi_gdc.png "Mutli GDC")
-![scr1](https://github.com/neilm-fourjs/layout_tests/raw/master/screenshots/layouts_4_multi_gma2.png "Mutli GMA")
 ![scr1](https://github.com/neilm-fourjs/layout_tests/raw/master/screenshots/layouts_4_multi_gma.png "Mutli GMA")
 
-## Padding
+## Padding 1
 Add paddng elements to the form to force buttons to the bottom of the screen.
 ![scr1](https://github.com/neilm-fourjs/layout_tests/raw/master/screenshots/layouts_5_padding_gbc.png "Padding GBC")
 ![scr1](https://github.com/neilm-fourjs/layout_tests/raw/master/screenshots/layouts_5_padding_gdc.png "Padding GDC")
 ![scr1](https://github.com/neilm-fourjs/layout_tests/raw/master/screenshots/layouts_5_padding_gma.png "Padding GMA")
+
+## Padding 2
+Pad form with centered items and bottom of the screen.
+![scr1](https://github.com/neilm-fourjs/layout_tests/raw/master/screenshots/layouts_6_padding_gbc.png "Padding GBC")
+![scr1](https://github.com/neilm-fourjs/layout_tests/raw/master/screenshots/layouts_6_padding_gdc.png "Padding GDC")
+![scr1](https://github.com/neilm-fourjs/layout_tests/raw/master/screenshots/layouts_6_padding_gma.png "Padding GMA")
