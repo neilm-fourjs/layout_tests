@@ -1,24 +1,27 @@
-DEFINE m_diag BOOLEAN
-CONSTANT c_appver = "1.0"
 
-CONSTANT c_f1 = "A simple centered icon with a title below it."
-CONSTANT c_f2 = "A title area with a logo, title and date. The text should be centered the image to left and the date to the right"
-CONSTANT c_f3 = "An icon and date to the right of the screen and a title to the left."
-CONSTANT c_f4 = "Various icons and text tests in a single form."
-CONSTANT c_f5 = "Pad form so the buttons are at the bottom of the screen."
-CONSTANT c_f6 = "Pad form with centered items and bottom of the screen."
-CONSTANT c_f7 = "Image sizing 1"
-CONSTANT c_f8 = "Image sizing 2"
-DEFINE m_tests DYNAMIC ARRAY OF STRING
+IMPORT util
+IMPORT os
+
+CONSTANT c_appver = "2.0"
+
+DEFINE m_diag BOOLEAN
+DEFINE j RECORD m_tests DYNAMIC ARRAY OF RECORD 
+			name STRING,
+			desc STRING,
+			img STRING
+		END RECORD
+	END RECORD
+DEFINE m_dialog ui.Dialog
+DEFINE m_fields DYNAMIC ARRAY OF RECORD
+		name STRING,
+		type STRING
+	END RECORD
+
 MAIN
-	LET m_tests[1] = c_f1
-	LET m_tests[2] = c_f2
-	LET m_tests[3] = c_f3
-	LET m_tests[4] = c_f4
-	LET m_tests[5] = c_f5
-	LET m_tests[6] = c_f6
-	LET m_tests[7] = c_f7
-	LET m_tests[8] = c_f8
+	DEFINE x SMALLINT
+	DEFINE l_event STRING
+
+	CALL setup_tests()
 
 	OPEN FORM f FROM "form"
 	DISPLAY FORM f
@@ -26,19 +29,36 @@ MAIN
 
 --	CALL ui.Form.setDefaultInitializer("form_init")
 
-	INPUT BY NAME m_diag ATTRIBUTE(UNBUFFERED,ACCEPT=FALSE,CANCEL=FALSE)
-		ON ACTION win1 CALL win("form1")
-		ON ACTION win2 CALL win("form2")
-		ON ACTION win3 CALL win("form3")
-		ON ACTION win4 CALL win("form4")
-		ON ACTION win5 CALL win("form5")
-		ON ACTION win6 CALL win("form6")
-		ON ACTION win7 CALL win("form7")
-		ON ACTION win8 CALL win("form8")
-		ON ACTION close EXIT INPUT
-		ON ACTION about CALL about()
-		ON ACTION quit EXIT INPUT
-	END INPUT
+  CALL ui.Dialog.setDefaultUnbuffered(TRUE)
+	LET m_fields[1].name = "m_diag"
+	LET m_fields[1].type = "BOOLEAN"
+  LET m_dialog = ui.Dialog.createInputByName(m_fields)
+
+  CALL m_dialog.addTrigger("ON ACTION close")
+  CALL m_dialog.addTrigger("ON ACTION about")
+  CALL m_dialog.addTrigger("ON ACTION quit")
+
+	FOR x = 1 TO j.m_tests.getLength() 
+  	CALL m_dialog.addTrigger("ON ACTION win"||x)
+	END FOR
+  LET int_flag = FALSE
+  WHILE NOT int_flag
+		LET l_event = m_dialog.nextEvent()
+--                                1234567890123
+		IF l_event.subString(1,13) = "ON ACTION win" THEN
+			CALL win("form"||l_event.subString(14, l_event.getLength() ))
+			CONTINUE WHILE
+		END IF
+    CASE l_event
+      WHEN "ON ACTION quit"
+        LET int_flag = TRUE
+        EXIT WHILE
+      WHEN "ON ACTION close"
+        LET int_flag = TRUE
+        EXIT WHILE
+      WHEN "ON ACTION about" CALL about()
+		END CASE
+	END WHILE
 
 END MAIN
 --------------------------------------------------------------------------------
@@ -164,12 +184,12 @@ FUNCTION extend_form()
 	DEFINE x SMALLINT
 	LET w = ui.Window.getCurrent()
 	LET n = w.findNode("Grid","tests")
-	FOR x = 1 TO m_tests.getLength()
+	FOR x = 1 TO j.m_tests.getLength()
 		LET g = n.createChild("Group")
 		CALL g.setAttribute("posY",x)
 		LET n1 = g.createChild("FormField")
 		CALL n1.setAttribute("name","formonly.f"||x)
-		CALL n1.setAttribute("value", m_tests[x])
+		CALL n1.setAttribute("value", j.m_tests[x].desc)
 		CALL n1.setAttribute("colName","f"||x)
 		LET n1 = n1.createChild("TextEdit")
 		CALL n1.setAttribute("posY",x)
@@ -180,6 +200,40 @@ FUNCTION extend_form()
 		CALL n1.setAttribute("style","noborder")
 		LET n1 = g.createChild("Button")
 		CALL n1.setAttribute("name","win"||x)
+		CALL n1.setAttribute("text",j.m_tests[x].name)
+		CALL n1.setAttribute("image",j.m_tests[x].img)
 		CALL n1.setAttribute("posY",x+4)
 	END FOR
+END FUNCTION
+--------------------------------------------------------------------------------
+-- Get the list of tests from a JSON file.
+FUNCTION setup_tests()
+	DEFINE l_jo util.JSONObject
+	DEFINE l_line STRING
+	DEFINE c base.Channel
+	
+	LET l_line = fgl_getEnv("TESTPATH")
+	IF l_line.getLength() > 0 THEN 
+		LET l_line = os.path.join(l_line,"tests.json")
+	ELSE
+		LET l_line = "tests.json"
+	END IF
+	DISPLAY "Test File:",l_line
+	LET c = base.Channel.create()
+	TRY
+		CALL c.openFile(l_Line,"r")
+	CATCH
+		CALL fgl_winMEssage("Error",SFMT("Failed to load %1",l_line),"exclamation")
+		EXIT PROGRAM
+	END TRY
+	LET l_line = NULL
+	WHILE NOT c.isEof()
+		LET l_line = l_line.append( c.readLine() )
+	END WHILE
+	CALL c.close()
+	LET l_jo = util.JSONObject.parse( l_line )
+
+	DISPLAY l_jo.toString()
+
+	CALL l_jo.toFGL( j )
 END FUNCTION

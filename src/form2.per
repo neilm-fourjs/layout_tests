@@ -2,13 +2,15 @@
 LAYOUT (TEXT="Center - title",MINWIDTH=60)
 GRID
 {
-[logo|title                             |date      ]
+[logo|s1|title                            |s2|date      ]
 }
 END -- GRID
 
 ATTRIBUTES
 IMAGE logo : logo, IMAGE="logo", STYLE="noborder";
+IMAGE s1 : spacer1, IMAGE="fa-fw", STRETCH=X, STYLE="noborder";
 LABEL TITLE = FORMONLY.title, SIZEPOLICY=FIXED, JUSTIFY=CENTER,STYLE="title";
+IMAGE s2 : spacer2, IMAGE="fa-fw", STRETCH=X, STYLE="noborder";
 LABEL date = FORMONLY.date;
 
 

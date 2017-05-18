@@ -60,7 +60,7 @@
       <DynamicProperty name="packageId" value="com.fourjs.layout_tests"/>
       <DynamicProperty name="packageLabel" value="LayoutTestsGMA"/>
       <Directory description="Binaries" destinationDirectory="$(ProjectDir)/bin" excludedFiles="Test.42r" includedFiles="*.42?" label="Binaries" recursive="false" sourceDirectory="$(ProjectDir)/bin"/>
-      <Directory description="Configuration Files" destinationDirectory="$(ProjectDir)/bin" includedFiles="fglprofile" label="Config" recursive="false" sourceDirectory="$(ProjectDir)/config"/>
+      <Directory description="Configuration Files" destinationDirectory="$(ProjectDir)/bin" label="Config" recursive="false" sourceDirectory="$(ProjectDir)/config"/>
       <Directory description="Database" destinationDirectory="$(ProjectDir)/bin" includedFiles="*.db" label="Database" recursive="false" sourceDirectory="$(ProjectDir)/database"/>
       <Directory description="Images" destinationDirectory="$(ProjectDir)/bin" includedFiles="*.png,*.jpg" label="Images" sourceDirectory="$(ProjectDir)/images"/>
       <Directory description="Studio Library" destinationDirectory="$(ProjectDir)/bin" includedFiles="*.42?" label="libgst" recursive="false" sourceDirectory="$(GSTLIBRARYDIR)/bin"/>
@@ -95,10 +95,12 @@
     <Library binaryName="_README" excludeFromBuild="true" id="-367608216" label="_README">
       <File filePath="README.md"/>
     </Library>
-    <Library binaryName="Config" id="362164715" label="Config"/>
+    <Library binaryName="Config" id="362164715" label="Config">
+      <File filePath="config/tests.json"/>
+    </Library>
     <Library binaryName="Database" id="455109296" label="Database"/>
     <Library binaryName="Entities" id="212784684" label="Entities"/>
-    <Application binaryName="layout_tests" dependencies="159917928,212784684,362164715,455109296" environment="dirlist:FGLIMAGEPATH=$(ProjectDir)/images;$(FGLDIR)/lib/image2font.txt;$(FGLIMAGEPATH)" id="400358049" label="layout_tests">
+    <Application binaryName="layout_tests" dependencies="159917928,212784684,362164715,455109296" environment="value:TESTPATH=../config,dirlist:FGLIMAGEPATH=$(ProjectDir)/images;$(FGLDIR)/lib/image2font.txt;$(FGLIMAGEPATH)" id="400358049" label="layout_tests">
       <File filePath="src/about.per"/>
       <File filePath="src/form.per"/>
       <File filePath="src/form1.per"/>

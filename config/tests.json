@@ -1,0 +1,44 @@
+{
+  "m_tests": [
+    {
+      "name": "Simple Center",
+      "desc": "A simple centered icon with a title below it.",
+      "img": "fa-caret-square-o-up"
+    },
+    {
+      "name": "Title Grid",
+      "desc": "A title area with a logo, title and date. The text should be centered the image to left and the date to the right",
+      "img": "fa-desktop"
+    },
+    {
+      "name": "Right Grid",
+      "desc": "An icon and date to the right of the screen and a title to the left.",
+      "img": "fa-caret-square-o-right"
+    },
+    {
+      "name": "Multiple Grids",
+      "desc": "Various icons and text tests in a single form.",
+      "img": "fa-desktop"
+    },
+    {
+      "name": "Padding 1",
+      "desc": "Pad form so the buttons are at the bottom of the screen.",
+      "img": "fa-list-alt"
+    },
+    {
+      "name": "Padding 1",
+      "desc": "Pad form with centered items and bottom of the screen.",
+      "img": "fa-list-alt"
+    },
+    {
+      "name": "Sizing 1",
+      "desc": "Image sizing 1",
+      "img": "fa-photo"
+    },
+    {
+      "name": "Sizing 2",
+      "desc": "Image sizing 2",
+      "img": "fa-photo"
+    }
+  ]
+}
