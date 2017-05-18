@@ -7,20 +7,24 @@ CONSTANT c_f3 = "An icon and date to the right of the screen and a title to the 
 CONSTANT c_f4 = "Various icons and text tests in a single form."
 CONSTANT c_f5 = "Pad form so the buttons are at the bottom of the screen."
 CONSTANT c_f6 = "Pad form with centered items and bottom of the screen."
-
+CONSTANT c_f7 = "Image sizing 1"
+CONSTANT c_f8 = "Image sizing 2"
+DEFINE m_tests DYNAMIC ARRAY OF STRING
 MAIN
+	LET m_tests[1] = c_f1
+	LET m_tests[2] = c_f2
+	LET m_tests[3] = c_f3
+	LET m_tests[4] = c_f4
+	LET m_tests[5] = c_f5
+	LET m_tests[6] = c_f6
+	LET m_tests[7] = c_f7
+	LET m_tests[8] = c_f8
 
 	OPEN FORM f FROM "form"
 	DISPLAY FORM f
+	CALL extend_form()
 
 --	CALL ui.Form.setDefaultInitializer("form_init")
-
-	DISPLAY c_f1 TO f1
-	DISPLAY c_f2 TO f2
-	DISPLAY c_f3 TO f3
-	DISPLAY c_f4 TO f4
-	DISPLAY c_f5 TO f5
-	DISPLAY c_f6 TO f6
 
 	INPUT BY NAME m_diag ATTRIBUTE(UNBUFFERED,ACCEPT=FALSE,CANCEL=FALSE)
 		ON ACTION win1 CALL win("form1")
@@ -29,6 +33,8 @@ MAIN
 		ON ACTION win4 CALL win("form4")
 		ON ACTION win5 CALL win("form5")
 		ON ACTION win6 CALL win("form6")
+		ON ACTION win7 CALL win("form7")
+		ON ACTION win8 CALL win("form8")
 		ON ACTION close EXIT INPUT
 		ON ACTION about CALL about()
 		ON ACTION quit EXIT INPUT
@@ -150,4 +156,30 @@ FUNCTION form_init(f ui.Form)
 
 	LET fn = f.getNode()
 	CALL fn.writeXml("form_after.xml")
+END FUNCTION
+--------------------------------------------------------------------------------
+FUNCTION extend_form()
+	DEFINE w ui.Window
+	DEFINE n,g,n1 om.DomNode
+	DEFINE x SMALLINT
+	LET w = ui.Window.getCurrent()
+	LET n = w.findNode("Grid","tests")
+	FOR x = 1 TO m_tests.getLength()
+		LET g = n.createChild("Group")
+		CALL g.setAttribute("posY",x)
+		LET n1 = g.createChild("FormField")
+		CALL n1.setAttribute("name","formonly.f"||x)
+		CALL n1.setAttribute("value", m_tests[x])
+		CALL n1.setAttribute("colName","f"||x)
+		LET n1 = n1.createChild("TextEdit")
+		CALL n1.setAttribute("posY",x)
+		CALL n1.setAttribute("height",3)
+		CALL n1.setAttribute("gridHeight",3)
+		CALL n1.setAttribute("scrollBars","none")
+		CALL n1.setAttribute("stretch","both")
+		CALL n1.setAttribute("style","noborder")
+		LET n1 = g.createChild("Button")
+		CALL n1.setAttribute("name","win"||x)
+		CALL n1.setAttribute("posY",x+4)
+	END FOR
 END FUNCTION

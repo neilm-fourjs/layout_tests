@@ -1,4 +1,4 @@
-LAYOUT (TEXT="Padding")   
+LAYOUT (TEXT="Padding 2")   
 VBOX 
 GRID
 {
@@ -22,12 +22,12 @@ ATTRIBUTES
 #use textedit
 LABEL welcome : welcome,TEXT=%"Welcome_Message", STYLE="title", JUSTIFY=CENTER;
 
-IMAGE spacer1 : spacer1, IMAGE="spacer", STRETCH=Y, STYLE="noborder";
+IMAGE spacer1 : spacer1, IMAGE="fa-fw", STRETCH=Y, STYLE="noborder";
 
 IMAGE splash:splash, STYLE="center noborder", IMAGE="disconnected", STRETCH=X, WIDTH=100, HEIGHT=100;
 LABEL connected=FORMONLY.connected, JUSTIFY=CENTER;
 
-IMAGE spacer2 : spacer2, IMAGE="spacer", STRETCH=Y, STYLE="noborder";
+IMAGE spacer2 : spacer2, IMAGE="fa-fw", STRETCH=Y, STYLE="noborder";
 
 BUTTON bt_sync : bt_sync, TEXT=%"Sync_With_Network";
 BUTTON bt_logout : bt_logout, TEXT=%"Logout";

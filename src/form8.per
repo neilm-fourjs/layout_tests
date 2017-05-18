@@ -1,0 +1,16 @@
+LAYOUT (TEXT="Image Sizing 2")   
+VBOX 
+GRID
+{
+This is a test:[i1]
+------------------------
+some text
+This is a test:[i2]
+some more text
+}
+END -- GRID
+END -- VBOX
+
+ATTRIBUTES
+IMAGE i1 : img1, IMAGE="logo";
+IMAGE i2 : img2, IMAGE="logo", AUTOSCALE,STRETCH=X,HEIGHT=16 PIXELS, WIDTH=16 PIXELS;

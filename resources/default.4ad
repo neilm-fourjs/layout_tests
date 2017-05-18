@@ -47,6 +47,8 @@ Property of Four Js*
   <ActionDefault name="win4" image="fa-desktop" text="Multiple Grids" contextMenu="no"/>
   <ActionDefault name="win5" image="fa-list-alt" text="Padding 1" contextMenu="no"/>
   <ActionDefault name="win6" image="fa-list-alt" text="Padding 2" contextMenu="no"/>
+  <ActionDefault name="win7" image="fa-photo" text="Image Sizing 1" contextMenu="no"/>
+  <ActionDefault name="win8" image="fa-photo" text="Image Sizing 2" contextMenu="no"/>
   <ActionDefault name="about" image="about" text="About" contextMenu="yes"/>
 	<ActionDefault name="gma_about" text="GMA" image="quest"/>
 	<ActionDefault name="back" text="Go Back" image="fa-arrow-left"/>

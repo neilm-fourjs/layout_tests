@@ -55,3 +55,11 @@ Pad form with centered items and bottom of the screen.
 ![scr1](https://github.com/neilm-fourjs/layout_tests/raw/master/screenshots/layouts_6_padding_gbc.png "Padding GBC")
 ![scr1](https://github.com/neilm-fourjs/layout_tests/raw/master/screenshots/layouts_6_padding_gdc.png "Padding GDC")
 ![scr1](https://github.com/neilm-fourjs/layout_tests/raw/master/screenshots/layouts_6_padding_gma.png "Padding GMA")
+
+## Image Sizing 1
+7 Image Sizing tests.
+![scr1](https://github.com/neilm-fourjs/layout_tests/raw/master/screenshots/layouts_7_padding_gdc.png "Image Sizing 1")
+
+## Image Sizing 2
+More Image Sizing tests.
+

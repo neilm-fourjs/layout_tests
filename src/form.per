@@ -1,59 +1,18 @@
 
 LAYOUT (TEXT="Layout Examples")
+VBOX
 GRID
 {
-Open Windows with
-style dialog:[x]
-<G                  >
- [but1             ]
- [f1               ]
- [                 ]
- [                 ]
-<                   >
-<G                  >
- [but2             ]
- [f2               ]
- [                 ]
- [                 ]
-<                   >
-<G                  >
- [but3             ]
- [f3               ]
- [                 ]
- [                 ]
-<                   >
-<G                  >
- [but4             ]
- [f4               ]
- [                 ]
- [                 ]
-<                   >
-<G                  >
- [but5             ]
- [f5               ]
- [                 ]
- [                 ]
-<                   >
-<G                  >
- [but6             ]
- [f6               ]
- [                 ]
- [                 ]
-<                   >
+Window as style dialog:[x]
 }
 END -- GRID
+GRID tests
+{
+
+}
+END -- GRID
+END -- VBOX
+END -- LAYOUT
 
 ATTRIBUTES
 CHECKBOX x = FORMONLY.m_diag,VALUECHECKED=1,VALUEUNCHECKED=0,DEFAULT=0, NOT NULL;
-TEXTEDIT f1 = FORMONLY.f1, SCROLLBARS=NONE, STRETCH=BOTH;
-TEXTEDIT f2 = FORMONLY.f2, SCROLLBARS=NONE, STRETCH=BOTH;
-TEXTEDIT f3 = FORMONLY.f3, SCROLLBARS=NONE, STRETCH=BOTH;
-TEXTEDIT f4 = FORMONLY.f4, SCROLLBARS=NONE, STRETCH=BOTH;
-TEXTEDIT f5 = FORMONLY.f5, SCROLLBARS=NONE, STRETCH=BOTH;
-TEXTEDIT f6 = FORMONLY.f6, SCROLLBARS=NONE, STRETCH=BOTH;
-BUTTON but1 : win1;
-BUTTON but2 : win2;
-BUTTON but3 : win3;
-BUTTON but4 : win4;
-BUTTON but5 : win5;
-BUTTON but6 : win6;
