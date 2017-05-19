@@ -35,6 +35,11 @@ Property of Four Js*
      <StyleAttribute name="fontSize" value="16pt" />
      <!-- StyleAttribute name="backgroundColor" value="window" /  doesn't work on GMA! -->
   </Style>
+  <Style name=".footer">
+     <StyleAttribute name="fontWeight" value="bold" />
+     <StyleAttribute name="fontSize" value="10pt" />
+     <!-- StyleAttribute name="backgroundColor" value="window" /  doesn't work on GMA! -->
+  </Style>
   <Style name=".hidden">
      <StyleAttribute name="textColor" value="transparent" />
   </Style>

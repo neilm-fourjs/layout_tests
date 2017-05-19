@@ -1,15 +1,15 @@
-LAYOUT (TEXT="To the Right",MINWIDTH=60)
+LAYOUT (TEXT="Footer",MINWIDTH=60)
 GRID
 {
-[title                           |logo         ]
-[                                |sp|date      ]
+[footer                          |sp|logo      ]
+[                                |  |date      ]
 }
 END -- GRID
 
 ATTRIBUTES
-LABEL TITLE = FORMONLY.title, SIZEPOLICY=FIXED,STYLE="title";
+LABEL footer = FORMONLY.footer, SIZEPOLICY=FIXED,STYLE="footer";
 
 IMAGE sp : spacer1, IMAGE="fa-fw", STRETCH=X, STYLE="noborder";
 
-IMAGE logo : logo, IMAGE="logo", STYLE="noborder right",STRETCH=X;
+IMAGE logo : logo, IMAGE="logo", STYLE="noborder right",STRETCH=X, SIZEPOLICY=FIXED, AUTOSCALE;
 LABEL date = FORMONLY.date,STYLE="noborder right", JUSTIFY=RIGHT;

@@ -11,8 +11,8 @@
       "img": "fa-desktop"
     },
     {
-      "name": "Right Grid",
-      "desc": "An icon and date to the right of the screen and a title to the left.",
+      "name": "Footer Grid",
+      "desc": "An icon and date to the right of the screen and a text to the left.",
       "img": "fa-caret-square-o-right"
     },
     {

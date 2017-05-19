@@ -82,6 +82,10 @@ FUNCTION win(l_form STRING)
 	IF n IS NOT NULL THEN
 		DISPLAY "My Title" TO title
 	END IF
+	LET n = w.findNode("FormField","formonly.footer")
+	IF n IS NOT NULL THEN
+		DISPLAY "(c) Four Js Developement Tools" TO footer
+	END IF
 	LET n = w.findNode("FormField","formonly.logo3")
 	IF n IS NOT NULL THEN
 		DISPLAY "logo" TO logo3

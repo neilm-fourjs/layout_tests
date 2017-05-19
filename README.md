@@ -29,13 +29,13 @@ A title area with a logo, title and date. The text should be centered the image 
 ![scr1](https://github.com/neilm-fourjs/layout_tests/raw/master/screenshots/layouts_2_title_gdc.png "Title GDC")
 ![scr1](https://github.com/neilm-fourjs/layout_tests/raw/master/screenshots/layouts_2_title_gma.png "Title GMA")
 
-## Right
+## Footer
 An icon and date to the right of the screen and a title to the left.
 
-![scr1](https://github.com/neilm-fourjs/layout_tests/raw/master/screenshots/layouts_3_right_gbc.png "Right GBC")
-![scr1](https://github.com/neilm-fourjs/layout_tests/raw/master/screenshots/layouts_3_right_gdc.png "Right GDC")
-![scr1](https://github.com/neilm-fourjs/layout_tests/raw/master/screenshots/layouts_3_right_gma2.png "Right GMA")
-![scr1](https://github.com/neilm-fourjs/layout_tests/raw/master/screenshots/layouts_3_right_gma.png "Right GMA")
+![scr1](https://github.com/neilm-fourjs/layout_tests/raw/master/screenshots/layouts_3_footer_gbc.png "Footer GBC")
+![scr1](https://github.com/neilm-fourjs/layout_tests/raw/master/screenshots/layouts_3_footer_gdc.png "Footer GDC")
+![scr1](https://github.com/neilm-fourjs/layout_tests/raw/master/screenshots/layouts_3_footer_gma2.png "Footer GMA")
+![scr1](https://github.com/neilm-fourjs/layout_tests/raw/master/screenshots/layouts_3_footer_gma.png "Footer GMA")
 
 ## Multi
 Various icons and text tests in a a single form. 
