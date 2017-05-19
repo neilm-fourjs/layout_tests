@@ -233,7 +233,7 @@ FUNCTION setup_tests()
 	CALL c.close()
 	LET l_jo = util.JSONObject.parse( l_line )
 
-	DISPLAY l_jo.toString()
+	--DISPLAY l_jo.toString()
 
 	CALL l_jo.toFGL( j )
 END FUNCTION

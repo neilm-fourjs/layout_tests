@@ -10,6 +10,12 @@ Property of Four Js*
 -->
 
 <StyleList>
+  <Style name=".bg1">
+     <StyleAttribute name="backgroundColor" value="lightcyan"/>
+  </Style>
+  <Style name=".bg2">
+     <StyleAttribute name="backgroundColor" value="azure2"/>
+  </Style>
   <Style name=".about">
      <StyleAttribute name="headerHidden" value="yes"/>
      <StyleAttribute name="highlightCurrentRow" value="no" />
