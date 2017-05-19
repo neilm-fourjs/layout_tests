@@ -14,7 +14,7 @@ Property of Four Js*
      <StyleAttribute name="backgroundColor" value="lightcyan"/>
   </Style>
   <Style name=".bg2">
-     <StyleAttribute name="backgroundColor" value="azure2"/>
+     <StyleAttribute name="backgroundColor" value="whitesmoke"/>
   </Style>
   <Style name=".about">
      <StyleAttribute name="headerHidden" value="yes"/>
