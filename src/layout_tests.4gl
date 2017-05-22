@@ -2,7 +2,7 @@
 IMPORT util
 IMPORT os
 
-CONSTANT c_appver = "2.0"
+CONSTANT c_appver = "2.1"
 
 DEFINE m_diag BOOLEAN
 DEFINE j RECORD m_tests DYNAMIC ARRAY OF RECORD 
@@ -122,6 +122,9 @@ FUNCTION about()
 	LET ar[ ar.getLength() ].val = fgl_getVersion()
 	LET ar[ ar.getLength() + 1 ].info = %"IMG Path:"
 	LET ar[ ar.getLength() ].val = NVL(fgl_getEnv("FGLIMAGEPATH"),"NULL")
+	LET ar[ ar.getLength() + 1 ].info = %"Current:"
+	LET ar[ ar.getLength() ].val = CURRENT
+
 --	LET ar[ ar.getLength() + 1 ].info = "ScreenRes:" 
 --	LET ar[ ar.getLength() ].val = 
 
