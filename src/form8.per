@@ -1,25 +1,15 @@
-LAYOUT (TEXT="Image Sizing 2")   
+LAYOUT (TEXT="Center Image")   
 VBOX 
 GRID
 {
-This is a test:[i1]
------------------------------
-This image can scale:[i2]
-}
-END -- GRID
-GRID
-{
 [s1]
----------------------------------
-[s2]This image can scale more:[i3]
+[img]
+[s2]
 }
 END -- GRID
 END -- VBOX
 
 ATTRIBUTES
-IMAGE i1 : img1, IMAGE="logo";
-IMAGE i2 : img2, IMAGE="logo", AUTOSCALE,STRETCH=X,HEIGHT=16 PIXELS, WIDTH=16 PIXELS;
-
-IMAGE s1 : s1, IMAGE="fa-fw", STRETCH=Y, STYLE="noborder";
-IMAGE s2 : s2, IMAGE="fa-fw", STRETCH=X, STYLE="noborder";
-IMAGE i3 : img3, IMAGE="logo", AUTOSCALE,STRETCH=X,HEIGHT=16 PIXELS, WIDTH=16 PIXELS;
+IMAGE s1 : spacer1, IMAGE="fa-fw", STRETCH=Y, STYLE="noborder";
+IMAGE img : img1, IMAGE="logo",STRETCH=X, STYLE="noborder center";
+IMAGE s2 : spacer2, IMAGE="fa-fw", STRETCH=Y, STYLE="noborder";

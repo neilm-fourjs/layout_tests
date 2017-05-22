@@ -58,10 +58,13 @@ Pad form with centered items and bottom of the screen.
 
 ## Image Sizing 1
 7 Image Sizing tests.
-![scr1](https://github.com/neilm-fourjs/layout_tests/raw/master/screenshots/layouts_7_sizing_gbc.png "Image Sizing 1")
-![scr1](https://github.com/neilm-fourjs/layout_tests/raw/master/screenshots/layouts_7_sizing_gdc.png "Image Sizing 1")
-![scr1](https://github.com/neilm-fourjs/layout_tests/raw/master/screenshots/layouts_7_sizing_gma.png "Image Sizing 1")
+![scr1](https://github.com/neilm-fourjs/layout_tests/raw/master/screenshots/layouts_7_sizing_gbc.png "Image Sizing")
+![scr1](https://github.com/neilm-fourjs/layout_tests/raw/master/screenshots/layouts_7_sizing_gdc.png "Image Sizing")
+![scr1](https://github.com/neilm-fourjs/layout_tests/raw/master/screenshots/layouts_7_sizing_gma.png "Image Sizing")
 
-## Image Sizing 2
-More Image Sizing tests.
+## Image Centered
+Centering an image in the current window/page/screen
+![scr1](https://github.com/neilm-fourjs/layout_tests/raw/master/screenshots/layouts_8_center_gbc.png "Image Center")
+![scr1](https://github.com/neilm-fourjs/layout_tests/raw/master/screenshots/layouts_8_center_gdc.png "Image Center")
+![scr1](https://github.com/neilm-fourjs/layout_tests/raw/master/screenshots/layouts_8_center_gma.png "Image Center")
 

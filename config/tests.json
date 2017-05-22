@@ -36,8 +36,8 @@
       "img": "fa-photo"
     },
     {
-      "name": "Sizing 2",
-      "desc": "Image sizing 2",
+      "name": "Image Center",
+      "desc": "A centered image",
       "img": "fa-photo"
     }
   ]
