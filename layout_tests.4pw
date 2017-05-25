@@ -57,6 +57,7 @@
   <PlatformList version="1.0"/>
   <Group label="Packages" language="Genero">
     <Package binaryName="layout_tests_gma" dependencies="400358049,781919164,159917928,212784684,715422167,362164715,313644474" description="Android Package" label="layout_tests_gma" platform="Android">
+      <DynamicProperty name="packageId" value="com.fourjs.layout_tests"/>
       <DynamicProperty name="packageLabel" value="LayoutTestsGMA"/>
       <Directory description="Binaries" destinationDirectory="$(ProjectDir)/bin" excludedFiles="Test.42r" includedFiles="*.42?" label="Binaries" recursive="false" sourceDirectory="$(ProjectDir)/bin"/>
       <Directory description="Configuration Files" destinationDirectory="$(ProjectDir)/bin" label="Config" recursive="false" sourceDirectory="$(ProjectDir)/config"/>
