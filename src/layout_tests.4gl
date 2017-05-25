@@ -223,7 +223,7 @@ FUNCTION setup_tests()
 	IF l_line.getLength() > 0 THEN 
 		LET l_line = os.path.join(l_line,"tests.json")
 	ELSE
-		LET l_line = "tests.json"
+		LET l_line = os.path.join(base.Application.getProgramDir(),"tests.json")
 	END IF
 	DISPLAY "Test File:",l_line
 	LET c = base.Channel.create()
