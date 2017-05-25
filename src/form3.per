@@ -1,15 +1,20 @@
 LAYOUT (TEXT="Footer",MINWIDTH=60)
 GRID
 {
+The form goes here:
+[spacer1                                       ]
+------------------------------------------------
 [footer                          |sp|logo      ]
 [                                |  |date      ]
 }
 END -- GRID
 
 ATTRIBUTES
+
+-- virtual spacer for force footer to bottom
+IMAGE spacer1 : spacer1, IMAGE="fa-fw", STRETCH=Y, STYLE="noborder";
+-- main footer area
 LABEL footer = FORMONLY.footer, SIZEPOLICY=FIXED,STYLE="footer";
-
-IMAGE sp : spacer1, IMAGE="fa-fw", STRETCH=X, STYLE="noborder";
-
+IMAGE sp : sp, IMAGE="fa-fw", STRETCH=X, STYLE="noborder";
 IMAGE logo : logo, IMAGE="logo", STYLE="noborder right",STRETCH=X, SIZEPOLICY=FIXED, AUTOSCALE;
 LABEL date = FORMONLY.date,STYLE="noborder right", JUSTIFY=RIGHT;
